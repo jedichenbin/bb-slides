@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
-    "prebuild": "npm run clean",
-    "build:html": "jade assets/markups/index.jade > dist/index.html",
-    "build:css": "less-fixed assets/styles/slides.less > dist/slides.css",
+    "prebuild": "npm run clean && mkdir dist",
+    "build:html": "jade assets/markups/index.jade -o dist",
+    "build:css": "less-fixed assets/styles/slides.less dist/slides.css",
     "build:js": "browserify assets/scripts/slides.js > dist/slides.js",
     "build": "npm run build:js && npm run build:css && npm run build:html"
   },
@@ -19,12 +19,12 @@
   "author": "bchen",
   "license": "MIT",
   "dependencies": {
-    "reveal": "0.0.4"
   },
   "devDependencies": {
+    "reveal": "0.0.4",
     "browserify": "^13.0.0",
     "jade": "^1.11.0",
-    "less-fixed": "0.0.4",
+    "less-fixed": "^0.0.4",
     "rimraf": "^2.5.2"
   }
 }

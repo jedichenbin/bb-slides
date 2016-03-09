@@ -1,4 +1,4 @@
-const Reveal = require('reveal.js');
+const Reveal = require('reveal');
 // Full list of configuration options available here: 
 // https://github.com/hakimel/reveal.js#configuration 
 Reveal.initialize({
