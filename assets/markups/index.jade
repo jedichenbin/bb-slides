@@ -30,16 +30,14 @@ html(lang="en")
                 h1 Domain
                 blockquote A Domain, in the broad sense, is what an organization
                   does and the world it does it in.
-                // When developing software for an organization,
-                // you're working in its Domain.
             section(data-markdown)
-                h1 Domain can refer to  
+                h2 Domain can refer to  
                 ul
                   li the entire domain of the business, 
                   li as well as just one core or supporting area of it
             section
-                h1 Should we 
-                h2 create a single, cohesive, all-inclusive models
+                h2 Should we 
+                h3 create a single, cohesive, all-inclusive models
                    of an organization's entire business domain
             section
                 h1 DDD places the emphasis on just the opposite 
@@ -54,7 +52,7 @@ html(lang="en")
                 h2 Using DDD, models are developed in Bounded Contexts
             // Ubiquitious Language for domains composition
             section
-                h1 Example of an Inventory System
+                h2 Example of an Inventory System
                 ul
                   li An Inventory System is about managing goods (items).
                   li Yet, there's no guarantee that it has a completely clean model, 
@@ -70,26 +68,27 @@ html(lang="en")
                 ul
                   li being consumed - Item Leaving Inventory
                   li and, an Inventoried Item that becomes broken - Wasted Inventory Item
-            // Separate Bounded Contexts for the models
+
          section
             section
-                h1 Another example in publishing organization
+                h2 Another example in publishing organization
                 ul
                   li Conceptualizing and proposing a book
                   li Contracting with authors
                   li Managing the book's authorship and editorial process
             section
-                h1 Example in publishing organization (cont.)
+                h2 Example in publishing organization (cont.)
                 ul
                   li Designing the book layout, including illustrations
                   li Translating the book into other languages
                   li Producing the physical print and/or electronic editions
             section
-                h1 Example in publishing organization (cont.)
+                h2 Example in publishing organization (cont.)
                 ul
                   li Marketing the book
                   li Selling the book to resellers and/or directly to consumers
                   li Shipping a physical book to resellers and consumers
+
          section
              section
                  h1 Bounded Contexts
@@ -111,11 +110,14 @@ html(lang="en")
                  p The drawing illustrates what already exists, and how the Bounded Contexts 
                    are integrated.
              section
+                 h2 Tangle within a single context
                  img(src="img/tagle-within-collaboration-context.jpg")
              section
+                 h2 Discover new contexts
                  img(src="img/discovery-of-contexts.jpg")
              section
+                 h2 Integrate the contexts
                  img(src="img/integration-of-contexts.jpg")
          section
-             THANKS
+             div THANKS
     script(src="slides.js")
