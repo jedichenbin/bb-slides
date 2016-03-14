@@ -2,10 +2,10 @@ doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
-    title reveal.js - The HTML Presentation Framework
+    title Brown Bags
  
-    meta(name="description" content="A framework for easily creating presentations")
-    meta(name="author" content="Hakim El Hattab")
+    meta(name="description" content="A framework for easily creating brown bag slides")
+    meta(name="author" content="bchen")
  
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
@@ -19,11 +19,41 @@ html(lang="en")
  
   body
     .reveal
-      // Any section element inside of this container is displayed as a slide
+      //- Any section element inside of this container is displayed as a slide
       .slides
         section
-          h1 Reveal.js
+            h1 Impression of DDD
+            img(src="img/impl-ddd-cover.jpg")
+        // Clarify what DDD is about
         section
-            h1 THE END
-            h2 BY Hakim El Hattab / hakim.se
+            section
+                h1 Domain
+                blockquote A Domain, in the broad sense, is what an organization
+                  does and the world it does it in.
+                // When developing software for an organization,
+                // you're working in its Domain.
+            section(data-markdown)
+                h1 Domain can refer to  
+                ul
+                  li the entire domain of the business, 
+                  li as well as just one core or supporting area of it
+            section
+                h1 We might think that  
+                q  we should create a single, cohesive, all-inclusive models
+                   of an organization's entire business domain
+            section
+                h1 However
+                h2 DDD places the emphasis on just the opposite 
+                blockquote The whole Domain of the organization is
+                  composed of Subdomains.
+            section
+                h1 In fact
+                blockquote Any attempt to define the business of even a
+                  moderately complex organization in a single,
+                  all-encompassing model will be at best extremely difficult
+                  and will usually fail.
+            section
+                h2 Using DDD, models are developed in Bounded Contexts
+        section
+            | TBD...
     script(src="slides.js")

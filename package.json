@@ -10,7 +10,8 @@
     "build:html": "jade assets/markups/index.jade -o dist",
     "build:css": "less-fixed assets/styles/slides.less dist/slides.css",
     "build:js": "browserify assets/scripts/slides.js > dist/slides.js",
-    "build": "npm run build:js && npm run build:css && npm run build:html"
+    "build:img": "cp -r assets/images dist/img",
+    "build": "npm run build:js && npm run build:css && npm run build:html && npm run build:img"
   },
   "keywords": [
     "revealjs",
