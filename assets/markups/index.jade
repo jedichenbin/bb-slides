@@ -33,12 +33,15 @@ html(lang="en")
             section(data-markdown)
                 h2 Domain can refer to  
                 ul
-                  li the entire domain of the business, 
-                  li as well as just one core or supporting area of it
+                  li.fragment the entire domain of the business, 
+                  li.fragment as well as just one core or supporting area of it
             section
-                h2 Should we 
-                p  create a single, cohesive, all-inclusive models
-                   of an organization's entire business domain?
+                p Should we create a 
+                ul
+                  li single,
+                  li cohesive,
+                  li all-inclusive models
+                p of an organization's entire business domain?
             section
                 h2 DDD places the emphasis on just the opposite 
             section
@@ -53,26 +56,26 @@ html(lang="en")
                 h2 Example of an Inventory System
                 ul
                   li An Inventory System is about managing goods (items).
-                  li Yet, there's no guarantee that it has a completely clean model, 
+                  li.fragment Yet, there's no guarantee that it has a completely clean model, 
                      possessing wholly unambiguous domain linguistics.
             section
                 h2 an Item
                 ul
                   li on order that is yet available for sale Back-Ordered Item
-                  li being received - Goods received
-                  li in stock - Stock Item
+                  li.fragment being received - Goods received
+                  li.fragment in stock - Stock Item
             section
                 h2 an Item (cont.)
                 ul
                   li being consumed - Item Leaving Inventory
-                  li and, an Inventoried Item that becomes broken - Wasted Inventory Item
+                  li.fragment and, an Inventoried Item that becomes broken - Wasted Inventory Item
             section
                 h1 Ubiquitious Language
                 ul
-                  li Ubiquitious means "found everywhere"
-                  li The use of the word is not an attempt to describe some kind 
+                  li.fragment Ubiquitious means "found everywhere"
+                  li.fragment The use of the word is not an attempt to describe some kind 
                      of enterprise-wide, company-wide, or universal domain language 
-                  li There is one Ubiquitious Language per Bounded Context
+                  li.fragment There is one Ubiquitious Language per Bounded Context
 
          section
             section
@@ -104,13 +107,15 @@ html(lang="en")
                    the Ubiquitious Language have specific meaning, and the model reflects 
                    the Language with exactness.
              section
-                 h2 Bounded Contexts -> Context Map
+                 h2 Bounded Contexts and Context Map
                  ul
-                   li On a single project that develops a single Bounded Context, 
-                      there are always one or more additional isolated Bounded Context
-                      with which it integrates using Context Map.
-                   li Each of the multiple Bounded Contexts that integrate has its own 
-                      Ubiquitious Language, even though some terms of each may overlap.
+                   li On a single project that develops a single
+                      Bounded Context, there are always one or more additional
+                      isolated Bounded Context with which it integrates using
+                      Context Map.
+                   li.fragment Each of the multiple Bounded Contexts that
+                      integrate has its own Ubiquitious Language, even though
+                      some terms of each may overlap.
              section
                  h2 Blended core concepts with generic ones
                  img(src="img/blended-core-concepts-with-generic-ones.jpg")
@@ -121,10 +126,10 @@ html(lang="en")
          section
              section
                  h1 Context Maps
-                 p To draw a simple diagram that shows the mappings between two or more  
-                   existing Bounded Contexts. 
-                 p The drawing illustrates what already exists, and how the Bounded Contexts 
-                   are integrated.
+                 p.fragment To draw a simple diagram that shows the mappings
+                   between two or more existing Bounded Contexts. 
+                 p.fragment The drawing illustrates what already exists, and
+                   how the Bounded Contexts are integrated.
              section
                  h2 Tangle within a single context
                  img(src="img/tagle-within-collaboration-context.jpg")
@@ -139,17 +144,20 @@ html(lang="en")
              section
                 h1 Core domain
                 ul
-                  li A Core Domain is a part of the business Domain that is of primary 
-                     importance.
-                  li The Core Domain requires excellence in implementation.
+                  li.fragment A Core Domain is a part of the business Domain
+                     that is of primary importance.
+                  li.fragment The Core Domain requires excellence in implementation.
              section
                  h1 Supporting & Generic domains
                  ul
-                   li Sometimes a Bounded Context is created or acquired to support the business
-                   li If it models some aspect of the business that is essential,
-                      yet not Core, it's a Supporting Subdomain
-                   li Otherwise, if it captures nothing special to the business, yet is required 
-                      for the overall solution, it is a Generic Subdomain.
+                   li.fragment Sometimes a Bounded Context is created or 
+                      acquired to support the business
+                   li.fragment If it models some aspect of the business that is 
+                      essential, yet not Core, it's a Supporting Subdomain
+                   li.fragment Otherwise, if it captures nothing special to the 
+                      business, yet is required for the overall solution, it 
+                      is a Generic Subdomain.
          section
              div THANKS
+             div Q & A
     script(src="slides.js")
