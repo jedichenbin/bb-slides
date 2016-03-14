@@ -23,7 +23,7 @@ html(lang="en")
       .slides
         section
             h1 Impression of DDD
-            img(src="img/impl-ddd-cover.jpg")
+            img(src="img/impl-ddd-cover.jpg", height="50%", width="50%")
         // Clarify what DDD is about
         section
             section
@@ -37,19 +37,17 @@ html(lang="en")
                   li as well as just one core or supporting area of it
             section
                 h2 Should we 
-                h3 create a single, cohesive, all-inclusive models
-                   of an organization's entire business domain
+                p  create a single, cohesive, all-inclusive models
+                   of an organization's entire business domain?
             section
-                h1 DDD places the emphasis on just the opposite 
+                h2 DDD places the emphasis on just the opposite 
             section
-                h1 In fact
+                h2 In fact
                 blockquote Any attempt to define the business of even a 
                   moderately complex organization in a single, 
                   all-encompassing model will be at best extremely difficult 
                   and will usually fail.
         section
-            section
-                h2 Using DDD, models are developed in Bounded Contexts
             // Ubiquitious Language for domains composition
             section
                 h2 Example of an Inventory System
@@ -68,6 +66,13 @@ html(lang="en")
                 ul
                   li being consumed - Item Leaving Inventory
                   li and, an Inventoried Item that becomes broken - Wasted Inventory Item
+            section
+                h1 Ubiquitious Language
+                ul
+                  li Ubiquitious means "found everywhere"
+                  li The use of the word is not an attempt to describe some kind 
+                     of enterprise-wide, company-wide, or universal domain language 
+                  li There is one Ubiquitious Language per Bounded Context
 
          section
             section
@@ -88,6 +93,8 @@ html(lang="en")
                   li Marketing the book
                   li Selling the book to resellers and/or directly to consumers
                   li Shipping a physical book to resellers and consumers
+            section
+                h2 Using DDD, models are developed in Bounded Contexts
 
          section
              section
@@ -97,11 +104,20 @@ html(lang="en")
                    the Ubiquitious Language have specific meaning, and the model reflects 
                    the Language with exactness.
              section
+                 h2 Bounded Contexts -> Context Map
+                 ul
+                   li On a single project that develops a single Bounded Context, 
+                      there are always one or more additional isolated Bounded Context
+                      with which it integrates using Context Map.
+                   li Each of the multiple Bounded Contexts that integrate has its own 
+                      Ubiquitious Language, even though some terms of each may overlap.
+             section
                  h2 Blended core concepts with generic ones
                  img(src="img/blended-core-concepts-with-generic-ones.jpg")
              section
                  h2 The whole Domain of the organization is composed of Subdomains
                  img(src="img/separate-boundex-contexts.jpg")
+
          section
              section
                  h1 Context Maps
@@ -118,6 +134,22 @@ html(lang="en")
              section
                  h2 Integrate the contexts
                  img(src="img/integration-of-contexts.jpg")
+
+         section
+             section
+                h1 Core domain
+                ul
+                  li A Core Domain is a part of the business Domain that is of primary 
+                     importance.
+                  li The Core Domain requires excellence in implementation.
+             section
+                 h1 Supporting & Generic domains
+                 ul
+                   li Sometimes a Bounded Context is created or acquired to support the business
+                   li If it models some aspect of the business that is essential,
+                      yet not Core, it's a Supporting Subdomain
+                   li Otherwise, if it captures nothing special to the business, yet is required 
+                      for the overall solution, it is a Generic Subdomain.
          section
              div THANKS
     script(src="slides.js")
