@@ -38,22 +38,84 @@ html(lang="en")
                   li the entire domain of the business, 
                   li as well as just one core or supporting area of it
             section
-                h1 We might think that  
-                q  we should create a single, cohesive, all-inclusive models
+                h1 Should we 
+                h2 create a single, cohesive, all-inclusive models
                    of an organization's entire business domain
             section
-                h1 However
-                h2 DDD places the emphasis on just the opposite 
-                blockquote The whole Domain of the organization is
-                  composed of Subdomains.
+                h1 DDD places the emphasis on just the opposite 
             section
                 h1 In fact
-                blockquote Any attempt to define the business of even a
-                  moderately complex organization in a single,
-                  all-encompassing model will be at best extremely difficult
+                blockquote Any attempt to define the business of even a 
+                  moderately complex organization in a single, 
+                  all-encompassing model will be at best extremely difficult 
                   and will usually fail.
+        section
             section
                 h2 Using DDD, models are developed in Bounded Contexts
-        section
-            | TBD...
+            // Ubiquitious Language for domains composition
+            section
+                h1 Example of an Inventory System
+                ul
+                  li An Inventory System is about managing goods (items).
+                  li Yet, there's no guarantee that it has a completely clean model, 
+                     possessing wholly unambiguous domain linguistics.
+            section
+                h2 an Item
+                ul
+                  li on order that is yet available for sale Back-Ordered Item
+                  li being received - Goods received
+                  li in stock - Stock Item
+            section
+                h2 an Item (cont.)
+                ul
+                  li being consumed - Item Leaving Inventory
+                  li and, an Inventoried Item that becomes broken - Wasted Inventory Item
+            // Separate Bounded Contexts for the models
+         section
+            section
+                h1 Another example in publishing organization
+                ul
+                  li Conceptualizing and proposing a book
+                  li Contracting with authors
+                  li Managing the book's authorship and editorial process
+            section
+                h1 Example in publishing organization (cont.)
+                ul
+                  li Designing the book layout, including illustrations
+                  li Translating the book into other languages
+                  li Producing the physical print and/or electronic editions
+            section
+                h1 Example in publishing organization (cont.)
+                ul
+                  li Marketing the book
+                  li Selling the book to resellers and/or directly to consumers
+                  li Shipping a physical book to resellers and consumers
+         section
+             section
+                 h1 Bounded Contexts
+                 blockquote A Bounded Context is an explicit boundary within which a 
+                   domain model exists. Inside the boundary all terms and phrases of 
+                   the Ubiquitious Language have specific meaning, and the model reflects 
+                   the Language with exactness.
+             section
+                 h2 Blended core concepts with generic ones
+                 img(src="img/blended-core-concepts-with-generic-ones.jpg")
+             section
+                 h2 The whole Domain of the organization is composed of Subdomains
+                 img(src="img/separate-boundex-contexts.jpg")
+         section
+             section
+                 h1 Context Maps
+                 p To draw a simple diagram that shows the mappings between two or more  
+                   existing Bounded Contexts. 
+                 p The drawing illustrates what already exists, and how the Bounded Contexts 
+                   are integrated.
+             section
+                 img(src="img/tagle-within-collaboration-context.jpg")
+             section
+                 img(src="img/discovery-of-contexts.jpg")
+             section
+                 img(src="img/integration-of-contexts.jpg")
+         section
+             THANKS
     script(src="slides.js")
